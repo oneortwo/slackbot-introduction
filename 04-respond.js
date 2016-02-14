@@ -25,7 +25,12 @@ bot.on('message', function(message) {
   if(message.type === "message") {
     var text = message.text;
     var user = bot._getUserById(message.user);
-    console.log("Got a message from " + user + ": " + text);
+
+    //Someone mentioned this bot user in some channel, group or dm
+    if (text.indexOf(settings.id) > -1) { 
+      console.log("My bot got mentioned by " + user);
+      bot.postMessage(message.channel, "Hey " + user + " :blush:", params);
+    }
   }
 });
 

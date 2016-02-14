@@ -21,9 +21,9 @@ bot.on('start', function() {
   console.log("Started");
 });
 
-bot.on('message', function(data) {
-  if(data.type === "message") {
-    var text = data.text;
+bot.on('message', function(message) {
+  if(message.type === "message") {
+    var text = message.text;
     console.log("Got a message: " + text);
   }
 });
