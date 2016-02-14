@@ -1,0 +1,14 @@
+{
+  "name": "slackbot-introduction",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/oneortwo/slackbot-introduction.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://github.com/oneortwo/slackbot-introduction",
+  "dependencies": {
+    "slackbots": "^0.5.1"
+  }
+}
