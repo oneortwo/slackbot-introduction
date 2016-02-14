@@ -19,6 +19,11 @@ var bot = new Bot(settings);
 
 bot.on('start', function() {
   console.log("Started");
-  console.log("Posting to " + CHANNEL);
-  bot.postMessage(CHANNEL, "Hello from " + settings.name, params);
+});
+
+bot.on('message', function(data) {
+  if(data.type === "message") {
+    var text = data.text;
+    console.log("Got a message: " + text);
+  }
 });
